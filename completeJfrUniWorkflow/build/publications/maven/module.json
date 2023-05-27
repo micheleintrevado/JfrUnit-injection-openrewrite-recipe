@@ -1,0 +1,183 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "org.michele",
+    "module": "completeJfrUniWorkflow",
+    "version": "0.0.1-SNAPSHOT",
+    "attributes": {
+      "org.gradle.status": "integration"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.1.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "org.openrewrite",
+          "module": "rewrite-java",
+          "version": {
+            "requires": "7.39.1"
+          }
+        },
+        {
+          "group": "org.openrewrite",
+          "module": "rewrite-maven",
+          "version": {
+            "requires": "7.39.1"
+          }
+        },
+        {
+          "group": "org.openrewrite",
+          "module": "rewrite-yaml",
+          "version": {
+            "requires": "7.39.1"
+          }
+        },
+        {
+          "group": "org.openrewrite",
+          "module": "rewrite-properties",
+          "version": {
+            "requires": "7.39.1"
+          }
+        },
+        {
+          "group": "org.openrewrite",
+          "module": "rewrite-xml",
+          "version": {
+            "requires": "7.39.1"
+          }
+        },
+        {
+          "group": "org.projectlombok",
+          "module": "lombok",
+          "version": {
+            "requires": "1.18.24"
+          }
+        },
+        {
+          "group": "de.danielbechler",
+          "module": "java-object-diff",
+          "version": {
+            "requires": "0.95"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "completeJfrUniWorkflow-0.0.1-SNAPSHOT.jar",
+          "url": "completeJfrUniWorkflow-0.0.1-SNAPSHOT.jar",
+          "size": 809,
+          "sha512": "d9cea52ee2410af8abf39504f8aa8e807a1f5d0958872b0b1e5ec543762c4b546f5f437fac2f7b700f0a23d9bcd3116b625eec82c5a026443ff044fc18e9febf",
+          "sha256": "52e96ddf1b5b34f79ec087395c1f5c0764d4a2c63a067e0509785bb62095c920",
+          "sha1": "3e9e240f8a9e46a339404427632c4c95182c9b71",
+          "md5": "470124971d613089be128d5580086034"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.openrewrite",
+          "module": "rewrite-java",
+          "version": {
+            "requires": "7.39.1"
+          }
+        },
+        {
+          "group": "org.openrewrite",
+          "module": "rewrite-maven",
+          "version": {
+            "requires": "7.39.1"
+          }
+        },
+        {
+          "group": "org.openrewrite",
+          "module": "rewrite-yaml",
+          "version": {
+            "requires": "7.39.1"
+          }
+        },
+        {
+          "group": "org.openrewrite",
+          "module": "rewrite-properties",
+          "version": {
+            "requires": "7.39.1"
+          }
+        },
+        {
+          "group": "org.openrewrite",
+          "module": "rewrite-xml",
+          "version": {
+            "requires": "7.39.1"
+          }
+        },
+        {
+          "group": "org.projectlombok",
+          "module": "lombok",
+          "version": {
+            "requires": "1.18.24"
+          }
+        },
+        {
+          "group": "de.danielbechler",
+          "module": "java-object-diff",
+          "version": {
+            "requires": "0.95"
+          }
+        },
+        {
+          "group": "org.openrewrite",
+          "module": "rewrite-java-8",
+          "version": {
+            "requires": "7.39.1"
+          }
+        },
+        {
+          "group": "org.openrewrite",
+          "module": "rewrite-java-11",
+          "version": {
+            "requires": "7.39.1"
+          }
+        },
+        {
+          "group": "org.openrewrite",
+          "module": "rewrite-java-17",
+          "version": {
+            "requires": "7.39.1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "completeJfrUniWorkflow-0.0.1-SNAPSHOT.jar",
+          "url": "completeJfrUniWorkflow-0.0.1-SNAPSHOT.jar",
+          "size": 809,
+          "sha512": "d9cea52ee2410af8abf39504f8aa8e807a1f5d0958872b0b1e5ec543762c4b546f5f437fac2f7b700f0a23d9bcd3116b625eec82c5a026443ff044fc18e9febf",
+          "sha256": "52e96ddf1b5b34f79ec087395c1f5c0764d4a2c63a067e0509785bb62095c920",
+          "sha1": "3e9e240f8a9e46a339404427632c4c95182c9b71",
+          "md5": "470124971d613089be128d5580086034"
+        }
+      ]
+    }
+  ]
+}

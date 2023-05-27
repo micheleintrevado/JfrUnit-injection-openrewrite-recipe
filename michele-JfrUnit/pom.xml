@@ -1,0 +1,125 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.michele</groupId>
+	<artifactId>michele-JfrUnit</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>michele-JfrUnit</name>
+	<description>inejct JfrUnit in JUnit 5 tests via OpenRewrite</description>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.testSource>17</maven.compiler.testSource>
+		<maven.compiler.testTarget>17</maven.compiler.testTarget>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.openrewrite.recipe</groupId>
+				<artifactId>rewrite-recipe-bom</artifactId>
+				<version>1.18.0</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+		<!-- rewrite-java depedencies only necessary for Java Recipe development -->
+		<dependency>
+			<groupId>org.openrewrite</groupId>
+			<artifactId>rewrite-java</artifactId>
+			<scope>compile</scope>
+		</dependency>
+
+		<!-- You only need the version that corresponds to your current
+    Java
+		version. It is fine to add all of them, though, as
+    they can coexist
+		on a classpath. -->
+		<dependency>
+			<groupId>org.openrewrite</groupId>
+			<artifactId>rewrite-java-8</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.openrewrite</groupId>
+			<artifactId>rewrite-java-11</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.openrewrite</groupId>
+			<artifactId>rewrite-java-17</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+
+		<!-- rewrite-maven dependency only necessary for Maven Recipe
+		development -->
+		<dependency>
+			<groupId>org.openrewrite</groupId>
+			<artifactId>rewrite-maven</artifactId>
+			<scope>compile</scope>
+		</dependency>
+
+		<!-- rewrite-yaml dependency only necessary for Yaml Recipe development -->
+		<dependency>
+			<groupId>org.openrewrite</groupId>
+			<artifactId>rewrite-yaml</artifactId>
+			<scope>compile</scope>
+		</dependency>
+
+		<!-- rewrite-properties dependency only necessary for Properties Recipe
+		development -->
+		<dependency>
+			<groupId>org.openrewrite</groupId>
+			<artifactId>rewrite-properties</artifactId>
+			<scope>compile</scope>
+		</dependency>
+
+		<!-- rewrite-xml dependency only necessary for XML Recipe development -->
+		<dependency>
+			<groupId>org.openrewrite</groupId>
+			<artifactId>rewrite-xml</artifactId>
+			<scope>compile</scope>
+		</dependency>
+
+		<!-- lombok is optional, but recommended for authoring recipes -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.24</version>
+			<optional>true</optional>
+		</dependency>
+
+		<!-- For authoring tests for any kind of Recipe -->
+		<dependency>
+			<groupId>org.openrewrite</groupId>
+			<artifactId>rewrite-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+
+		<!--
+		https://mvnrepository.com/artifact/de.danielbechler/java-object-diff -->
+		<dependency>
+			<groupId>de.danielbechler</groupId>
+			<artifactId>java-object-diff</artifactId>
+			<version>0.95</version>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.0.0-M9</version>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

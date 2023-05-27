@@ -1,0 +1,183 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "org.michele",
+    "module": "michele-JfrUnit",
+    "version": "0.0.1-SNAPSHOT",
+    "attributes": {
+      "org.gradle.status": "integration"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.1.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "org.openrewrite",
+          "module": "rewrite-java",
+          "version": {
+            "requires": "7.39.1"
+          }
+        },
+        {
+          "group": "org.openrewrite",
+          "module": "rewrite-maven",
+          "version": {
+            "requires": "7.39.1"
+          }
+        },
+        {
+          "group": "org.openrewrite",
+          "module": "rewrite-yaml",
+          "version": {
+            "requires": "7.39.1"
+          }
+        },
+        {
+          "group": "org.openrewrite",
+          "module": "rewrite-properties",
+          "version": {
+            "requires": "7.39.1"
+          }
+        },
+        {
+          "group": "org.openrewrite",
+          "module": "rewrite-xml",
+          "version": {
+            "requires": "7.39.1"
+          }
+        },
+        {
+          "group": "org.projectlombok",
+          "module": "lombok",
+          "version": {
+            "requires": "1.18.24"
+          }
+        },
+        {
+          "group": "de.danielbechler",
+          "module": "java-object-diff",
+          "version": {
+            "requires": "0.95"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "michele-JfrUnit-0.0.1-SNAPSHOT.jar",
+          "url": "michele-JfrUnit-0.0.1-SNAPSHOT.jar",
+          "size": 4392,
+          "sha512": "3e45f34ebbebc34fc237439268c34f2bb66686d5719ed10c52eabf6a0b122014fc0680b1c7fd0e547295ada6ffd647d0c35ac681294da377bd5bc9af281fa829",
+          "sha256": "6a1812f5addcbefef63321d51bc8433b8cee6f9c86cc2aebff2af262c3a4bd34",
+          "sha1": "2558aa9dba450636eaccbafd993f40bd3cd8b228",
+          "md5": "9f3bfd5a0bdde6335c676ef36cef670d"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.openrewrite",
+          "module": "rewrite-java",
+          "version": {
+            "requires": "7.39.1"
+          }
+        },
+        {
+          "group": "org.openrewrite",
+          "module": "rewrite-maven",
+          "version": {
+            "requires": "7.39.1"
+          }
+        },
+        {
+          "group": "org.openrewrite",
+          "module": "rewrite-yaml",
+          "version": {
+            "requires": "7.39.1"
+          }
+        },
+        {
+          "group": "org.openrewrite",
+          "module": "rewrite-properties",
+          "version": {
+            "requires": "7.39.1"
+          }
+        },
+        {
+          "group": "org.openrewrite",
+          "module": "rewrite-xml",
+          "version": {
+            "requires": "7.39.1"
+          }
+        },
+        {
+          "group": "org.projectlombok",
+          "module": "lombok",
+          "version": {
+            "requires": "1.18.24"
+          }
+        },
+        {
+          "group": "de.danielbechler",
+          "module": "java-object-diff",
+          "version": {
+            "requires": "0.95"
+          }
+        },
+        {
+          "group": "org.openrewrite",
+          "module": "rewrite-java-8",
+          "version": {
+            "requires": "7.39.1"
+          }
+        },
+        {
+          "group": "org.openrewrite",
+          "module": "rewrite-java-11",
+          "version": {
+            "requires": "7.39.1"
+          }
+        },
+        {
+          "group": "org.openrewrite",
+          "module": "rewrite-java-17",
+          "version": {
+            "requires": "7.39.1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "michele-JfrUnit-0.0.1-SNAPSHOT.jar",
+          "url": "michele-JfrUnit-0.0.1-SNAPSHOT.jar",
+          "size": 4392,
+          "sha512": "3e45f34ebbebc34fc237439268c34f2bb66686d5719ed10c52eabf6a0b122014fc0680b1c7fd0e547295ada6ffd647d0c35ac681294da377bd5bc9af281fa829",
+          "sha256": "6a1812f5addcbefef63321d51bc8433b8cee6f9c86cc2aebff2af262c3a4bd34",
+          "sha1": "2558aa9dba450636eaccbafd993f40bd3cd8b228",
+          "md5": "9f3bfd5a0bdde6335c676ef36cef670d"
+        }
+      ]
+    }
+  ]
+}
