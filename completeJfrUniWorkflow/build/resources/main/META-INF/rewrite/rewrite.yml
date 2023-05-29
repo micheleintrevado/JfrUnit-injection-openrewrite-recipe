@@ -3,11 +3,11 @@ name: org.michele.recipe.CompleteJfrUnitInjection
 displayName: Complete JfrUnit Injection
 description: this recipe is devoted to develop a full workflow that injects JfrUnit in an already existing Project.
 recipeList:
-  - org.openrewrite.java.testing.junit5.JUnit4to5Migration
+  - "org.openrewrite.java.testing.junit5.JUnit4to5Migration"
   - org.openrewrite.maven.AddDependency:
-    groupId: 'org.moditect.jfrunit'
-    artifactId: 'jfrunit-core'
-    version: 'test'
-    scope: 'test'
-  - org.openrewrite.java.RemoveUnusedImports
-  - org.michele.recipe.JfrRecipe
+    groupId: "org.moditect.jfrunit"
+    artifactId: "jfrunit-core"
+    version: "test"
+    scope: "test"
+  - "org.openrewrite.java.RemoveUnusedImports"
+  - "org.michele.recipe.JfrRecipe"

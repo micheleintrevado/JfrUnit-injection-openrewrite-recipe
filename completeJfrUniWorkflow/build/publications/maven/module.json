@@ -78,11 +78,11 @@
         {
           "name": "completeJfrUniWorkflow-0.0.1-SNAPSHOT.jar",
           "url": "completeJfrUniWorkflow-0.0.1-SNAPSHOT.jar",
-          "size": 809,
-          "sha512": "d9cea52ee2410af8abf39504f8aa8e807a1f5d0958872b0b1e5ec543762c4b546f5f437fac2f7b700f0a23d9bcd3116b625eec82c5a026443ff044fc18e9febf",
-          "sha256": "52e96ddf1b5b34f79ec087395c1f5c0764d4a2c63a067e0509785bb62095c920",
-          "sha1": "3e9e240f8a9e46a339404427632c4c95182c9b71",
-          "md5": "470124971d613089be128d5580086034"
+          "size": 813,
+          "sha512": "ee4661b605fed4393a3713dfa455369f2f93325a89facc063172098a72bd89c1c82ccdbd08ec92e9486fe67f69bd37bb90e58ecbf1bbabc31af4284204e9d8b8",
+          "sha256": "af40fc57340010133792a474e671f590d5b65856d753667fe045488acb1a4fb6",
+          "sha1": "9ecb01c13d0586575ab46f06cfce93e2172aace5",
+          "md5": "90f24074e62a7683b80a48528e589002"
         }
       ]
     },
@@ -171,11 +171,11 @@
         {
           "name": "completeJfrUniWorkflow-0.0.1-SNAPSHOT.jar",
           "url": "completeJfrUniWorkflow-0.0.1-SNAPSHOT.jar",
-          "size": 809,
-          "sha512": "d9cea52ee2410af8abf39504f8aa8e807a1f5d0958872b0b1e5ec543762c4b546f5f437fac2f7b700f0a23d9bcd3116b625eec82c5a026443ff044fc18e9febf",
-          "sha256": "52e96ddf1b5b34f79ec087395c1f5c0764d4a2c63a067e0509785bb62095c920",
-          "sha1": "3e9e240f8a9e46a339404427632c4c95182c9b71",
-          "md5": "470124971d613089be128d5580086034"
+          "size": 813,
+          "sha512": "ee4661b605fed4393a3713dfa455369f2f93325a89facc063172098a72bd89c1c82ccdbd08ec92e9486fe67f69bd37bb90e58ecbf1bbabc31af4284204e9d8b8",
+          "sha256": "af40fc57340010133792a474e671f590d5b65856d753667fe045488acb1a4fb6",
+          "sha1": "9ecb01c13d0586575ab46f06cfce93e2172aace5",
+          "md5": "90f24074e62a7683b80a48528e589002"
         }
       ]
     }

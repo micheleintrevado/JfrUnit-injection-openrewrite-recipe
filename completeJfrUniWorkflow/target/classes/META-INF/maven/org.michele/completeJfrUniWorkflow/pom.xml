@@ -107,14 +107,7 @@
 			<artifactId>java-object-diff</artifactId>
 			<version>0.95</version>
 		</dependency>
-		
-		
-		<!-- necessary dependency to use JUnit4to5Migration recipe -->
-		<dependency>
-			<groupId>org.openrewrite.recipe</groupId>
-			<artifactId>rewrite-testing-frameworks</artifactId>
-			<version>1.37.0</version>
-		</dependency>
+
 
 	</dependencies>
 
@@ -134,6 +127,26 @@
 					</activeRecipes>
 				</configuration>
 				<dependencies>
+
+					<!-- necessary dependency to use JUnit4to5Migration recipe -->
+					<dependency>
+						<groupId>org.openrewrite.recipe</groupId>
+						<artifactId>rewrite-testing-frameworks</artifactId>
+						<version>1.37.0</version>
+					</dependency>
+
+					<dependency>
+						<groupId>org.openrewrite</groupId>
+						<artifactId>rewrite-maven</artifactId>
+						<version>7.40.6</version>
+					</dependency>
+
+					<dependency>
+						<groupId>org.openrewrite</groupId>
+						<artifactId>rewrite-java</artifactId>
+						<version>7.40.6</version>
+					</dependency>
+
 					<dependency>
 						<groupId>org.michele</groupId>
 						<artifactId>michele-JfrUnit</artifactId>
