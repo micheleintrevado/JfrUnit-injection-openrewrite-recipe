@@ -124,6 +124,8 @@
 						<recipe>org.openrewrite.maven.AddDependency</recipe>
 						<recipe>org.openrewrite.java.RemoveUnusedImports</recipe>
 						<recipe>org.michele.recipe.JfrRecipe</recipe>
+						<recipe>org.openrewrite.java.format.TabsAndIndents</recipe>
+						<!--<recipe>org.openrewrite.java.format.AutoFormat</recipe>-->
 					</activeRecipes>
 				</configuration>
 				<dependencies>
