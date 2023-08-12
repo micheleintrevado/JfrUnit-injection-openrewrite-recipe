@@ -2,13 +2,16 @@ type: specs.openrewrite.org/v1beta/recipe
 name: org.michele.recipe.CompleteJfrUnitInjection
 displayName: Complete JfrUnit Injection
 description: this recipe is devoted to develop a full workflow that injects JfrUnit in an already existing Project.
+# the following recipes will be executed sequentially
 recipeList:
+  # when the tested repository makes use of JUnit 4, we need to migrate to JUnit 5 by using the recipe provided by OpenRewrite  
   - org.openrewrite.java.testing.junit5.JUnit4to5Migration
+  # this recipe adds the dependency to JfrUnit in the "pom.xml" file
   - org.openrewrite.maven.AddDependency:
       groupId: org.moditect.jfrunit
       artifactId: jfrunit-core
       version: 1.0.0.Alpha2
       scope: test
       onlyIfUsing: org.junit.jupiter.api.*
-  - org.openrewrite.java.RemoveUnusedImports
+  # execution of my custom recipe to inject JfrUnit in the unit testing methods
   - org.michele.recipe.JfrRecipe

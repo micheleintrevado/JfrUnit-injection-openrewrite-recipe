@@ -78,11 +78,11 @@
         {
           "name": "michele-JfrUnit-0.0.1-SNAPSHOT.jar",
           "url": "michele-JfrUnit-0.0.1-SNAPSHOT.jar",
-          "size": 8596,
-          "sha512": "36f198a0749dcc3b7b2d71fdb7ff9f9f2d3e14284af04490cfa973ec4a693f3f85193d9aefb373e9fccbb2b34ff7ca387fc6a0657806f7042c2ea17381fd11af",
-          "sha256": "284074a6d44e67c229c06210f5be083bb0222e4d238ad0ecca57928760081976",
-          "sha1": "0d0d1ac7f2ef7def1faf457ce942946ef4ec43be",
-          "md5": "da182942cf2cbd8277793750a1271852"
+          "size": 8514,
+          "sha512": "7aa60f390fef2665561268ce6a0a818cdf10b767ef82039abfbf9b4b05fb6208989f108e29c1138ae482e5cb5cfb66222c53837a1a7db8d7f6cec58d1c7f4a5b",
+          "sha256": "4ba590c3c3852c6115ba6eb2de9c29137f1d586c8f2a6af9b8d3a51a8b669974",
+          "sha1": "4c48fa9325704209c5890263a4c849f38eb639be",
+          "md5": "5ffbccb37e96b389fa74c03f043be834"
         }
       ]
     },
@@ -171,11 +171,11 @@
         {
           "name": "michele-JfrUnit-0.0.1-SNAPSHOT.jar",
           "url": "michele-JfrUnit-0.0.1-SNAPSHOT.jar",
-          "size": 8596,
-          "sha512": "36f198a0749dcc3b7b2d71fdb7ff9f9f2d3e14284af04490cfa973ec4a693f3f85193d9aefb373e9fccbb2b34ff7ca387fc6a0657806f7042c2ea17381fd11af",
-          "sha256": "284074a6d44e67c229c06210f5be083bb0222e4d238ad0ecca57928760081976",
-          "sha1": "0d0d1ac7f2ef7def1faf457ce942946ef4ec43be",
-          "md5": "da182942cf2cbd8277793750a1271852"
+          "size": 8514,
+          "sha512": "7aa60f390fef2665561268ce6a0a818cdf10b767ef82039abfbf9b4b05fb6208989f108e29c1138ae482e5cb5cfb66222c53837a1a7db8d7f6cec58d1c7f4a5b",
+          "sha256": "4ba590c3c3852c6115ba6eb2de9c29137f1d586c8f2a6af9b8d3a51a8b669974",
+          "sha1": "4c48fa9325704209c5890263a4c849f38eb639be",
+          "md5": "5ffbccb37e96b389fa74c03f043be834"
         }
       ]
     }

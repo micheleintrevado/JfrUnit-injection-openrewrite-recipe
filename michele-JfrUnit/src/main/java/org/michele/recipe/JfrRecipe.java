@@ -37,6 +37,8 @@ public class JfrRecipe extends Recipe {
 	@Nullable
 	@Override
 	protected TreeVisitor<?, ExecutionContext> getSingleSourceApplicableTest() {
+		// this statement is used to detect the classes that will make use of JUnit 5,
+		// so where there will be some testing methods
 		return new UsesType<>("org.junit.jupiter.api.Test", false);
 	}
 
@@ -77,7 +79,8 @@ public class JfrRecipe extends Recipe {
 		private final JavaTemplate addAwaitEventsTemplate = JavaTemplate
 				.builder(this::getCursor, "jfrEvents.awaitEvents();").build();
 
-		// VISIT PARTS OF THE LST like class declarations, method declarations, etc...
+		// VISIT PARTS OF THE LST (tree representation of the code) like class
+		// declarations, method declarations, etc...
 
 		@Override
 		public J.ClassDeclaration visitClassDeclaration(J.ClassDeclaration c, ExecutionContext executionContext) {
@@ -86,15 +89,16 @@ public class JfrRecipe extends Recipe {
 			boolean isTestClass = false;
 
 			// check if the class already has a @JfrEventTest annotation. Don't make any
-			// changes if there is the @JfrEventTest annotation.
+			// changes if already there is the @JfrEventTest annotation.
 			boolean hasJfrUnitClassAnnotation = classDecl.getLeadingAnnotations().stream()
 					.anyMatch(jfrClassAnnotation -> jfrClassAnnotation.getSimpleName().equals("JfrEventTest"));
 
 			// check if the tesitng class has the explicit "public" modifier. JfrUnit needs
-			// it to work
+			// of it to work
 			boolean hasExplicitPublicModifier = classDecl.hasModifier(J.Modifier.Type.Public);
 
-			// check if the class is a testing class ( check if there is at least one testing method in the class)
+			// check if the class is a testing class ( check if there is at least one
+			// testing method in the class)
 			List<MethodDeclaration> classMethods = classDecl.getBody().getStatements().stream()
 					.filter(statement -> statement instanceof J.MethodDeclaration)
 					.map(stat -> (J.MethodDeclaration) stat).collect(Collectors.toList());
@@ -151,7 +155,8 @@ public class JfrRecipe extends Recipe {
 			boolean hasJfrUnitMethodAnnotation = methodDecl.getLeadingAnnotations().stream()
 					.anyMatch(jfrMethodAnnotation -> jfrMethodAnnotation.getSimpleName().equals("EnableEvent"));
 
-			// check if the method is a testing method (check if it has some test annotations like @Test)
+			// check if the method is a testing method (check if it has some test
+			// annotations like @Test)
 			boolean hasTestAnnotation = methodDecl.getLeadingAnnotations().stream()
 					.anyMatch(methodAnnotation -> methodAnnotation.getSimpleName().equals("Test")
 							|| methodAnnotation.getSimpleName().equals("ParameterizedTest")
@@ -169,7 +174,7 @@ public class JfrRecipe extends Recipe {
 					methodDecl = methodDecl.withModifiers(modifierList);
 				}
 
-				//add @EnableEvent("jdk.*") before the method
+				// add @EnableEvent("jdk.*") annotation before the method
 				maybeAddImport("org.moditect.jfrunit.EnableEvent");
 				methodDecl = methodDecl.withTemplate(jfrUnitMethodAnnotationTemplate,
 						methodDecl.getCoordinates().addAnnotation(Comparator.comparing(J.Annotation::getSimpleName)));
@@ -178,7 +183,7 @@ public class JfrRecipe extends Recipe {
 					boolean hasJfrUnitAwaitEventsStatement = methodDecl.getBody().getStatements().stream()
 							.anyMatch(methodStatement -> methodStatement.toString().equals("jfrEvents.awaitEvents()"));
 					if ((!hasJfrUnitAwaitEventsStatement) && hasTestAnnotation) {
-						// add jfrEvents as last statement of the testing method
+						// add jfrEvents.awaitEvents() as last statement of the testing method
 						methodDecl = methodDecl.withTemplate(addAwaitEventsTemplate,
 								methodDecl.getBody().getCoordinates().lastStatement());
 					}

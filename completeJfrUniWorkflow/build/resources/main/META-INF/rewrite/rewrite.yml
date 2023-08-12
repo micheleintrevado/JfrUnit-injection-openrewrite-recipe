@@ -10,5 +10,5 @@ recipeList:
       version: 1.0.0.Alpha2
       scope: test
       onlyIfUsing: org.junit.jupiter.api.*
-  - org.openrewrite.java.RemoveUnusedImports
+#  - org.openrewrite.java.RemoveUnusedImports
   - org.michele.recipe.JfrRecipe
