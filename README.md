@@ -17,7 +17,7 @@ This project is made up of two refactoring recipies:
 
 ### Usage guide
 To execute the whole workflow you need to run the following steps:
-1) Clone the recipe repository ([click here] (https://github.com/micheleintrevado/JfrUnit-injection-openrewrite-recipe)).
+1) Clone the recipe repository (https://github.com/micheleintrevado/JfrUnit-injection-openrewrite-recipe).
 2) Run on the terminal the command “gradlew publishToMavenLocal” in the directory “JfrUnit-injection-openrewrite-recipe/michele-JfrUnit”.
 3) Run on the terminal the command “gradlew publishToMavenLocal” in the directory “JfrUnit-injection-openrewrite-recipe/completeJfrUniWorkflow”.
 4) Run the following maven plugin in the in the pom.xml file of the project to refactor:
