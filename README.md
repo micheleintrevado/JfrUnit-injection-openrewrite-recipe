@@ -14,3 +14,5 @@ The target of this project is to inject all the JfrUnit code to start a JFR reco
 This project is made up of two refactoring recipies:
 - **michele-JfrUnit**: this recipe aims to add the JfrUnit stuff like annotations, statements, etc necessary to start a JFR recording.
 - **completeJfrUnitWorkflow**: this recipe aims to refactor a generic project in a way that allows to inject JfrUnit (e.g.: add JfrUnit dependency, etc...).
+
+### The documentation can be found in [doc/report_avv.pdf](https://github.com/micheleintrevado/JfrUnit-injection-openrewrite-recipe/blob/main/doc/report_avv.pdf)
