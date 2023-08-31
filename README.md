@@ -15,4 +15,52 @@ This project is made up of two refactoring recipies:
 - **michele-JfrUnit**: this recipe aims to add the JfrUnit stuff like annotations, statements, etc necessary to start a JFR recording.
 - **completeJfrUnitWorkflow**: this recipe aims to refactor a generic project in a way that allows to inject JfrUnit (e.g.: add JfrUnit dependency, etc...).
 
+### Usage guide
+To execute the whole workflow you need to run the following steps:
+1) Clone the recipe repository ([click here] (https://github.com/micheleintrevado/JfrUnit-injection-openrewrite-recipe)).
+2) Run on the terminal the command “gradlew publishToMavenLocal” in the directory “JfrUnit-injection-openrewrite-recipe/michele-JfrUnit”.
+3) Run on the terminal the command “gradlew publishToMavenLocal” in the directory “JfrUnit-injection-openrewrite-recipe/completeJfrUniWorkflow”.
+4) Run the following maven plugin in the in the pom.xml file of the project to refactor:
+```
+<plugin>
+<groupId>org.openrewrite.maven</groupId>
+<artifactId>rewrite-maven-plugin</artifactId>
+<version>4.45.0</version>
+<configuration>
+<activeRecipes>
+     <recipe>org.michele.recipe.CompleteJfrUnitInjection</recipe>
+</activeRecipes>
+</configuration>
+<dependencies>
+     <dependency>
+          <groupId>org.michele</groupId>
+          <artifactId>completeJfrUniWorkflow</artifactId>
+          <version>0.0.1-SNAPSHOT</version>
+     </dependency>
+     <dependency>
+          <groupId>org.openrewrite.recipe</groupId>
+          <artifactId>rewrite-testing-frameworks</artifactId>
+          <version>1.37.0</version>
+     </dependency>
+     <dependency>
+          <groupId>org.openrewrite</groupId>
+          <artifactId>rewrite-maven</artifactId>
+          <version>7.40.6</version>
+     </dependency>
+     <dependency>
+          <groupId>org.openrewrite</groupId>
+          <artifactId>rewrite-java</artifactId>
+          <version>7.40.6</version>
+     </dependency>
+     <dependency>
+          <groupId>org.michele</groupId>
+          <artifactId>michele-JfrUnit</artifactId>
+          <version>0.0.1-SNAPSHOT</version>
+     </dependency>
+</dependencies>	
+</plugin>
+```
+6) Run on the terminal the command “mvn rewrite:run” in the directory of the project to refactor.
+7) Run on the terminal the command “mvn clean test” in the directory of the project that I’ve just refactored.
+
 ### The documentation can be found in [doc/report_avv.pdf](https://github.com/micheleintrevado/JfrUnit-injection-openrewrite-recipe/blob/main/doc/report_avv.pdf)
